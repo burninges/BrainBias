@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="NO"
-        android:id="@+id/twoButton"
+        android:id="@+id/buttonNo"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textSize="20sp" />
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="YES"
         android:id="@+id/buttonYes"
-        android:layout_above="@+id/twoButton"
+        android:layout_above="@+id/buttonNo"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp"
         android:textSize="20sp" />

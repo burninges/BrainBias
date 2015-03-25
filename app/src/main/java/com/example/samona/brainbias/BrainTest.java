@@ -1,5 +1,6 @@
 package com.example.samona.brainbias;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,27 +9,41 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.samona.brainbias.questions.Question;
 
-public class BrainTest extends ActionBarActivity {
 
+public class BrainTest extends ActionBarActivity
+    {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+        {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_brain_test);
-
+    final Question currentQuestion = BrainBias.QUESTIONS[0];
     Button buttonYes = (Button) findViewById(R.id.buttonYes);
-    buttonYes.setOnClickListener(new Button.OnClickListener() {
-
-        public void onClick(View v) {
-
-            Log.d("BrainTest", "buttonYes click");
-
-
-                //Do stuff here
-            }
-        });
+    buttonYes.setOnClickListener(new Button.OnClickListener()
+            {
+    public void onClick(View v)
+                {
+    Log.d("BrainTest", "buttonYes click");
+    Intent intent = new Intent(getApplicationContext(), Result.class);
+    intent.getExtras().putString("Guess", "Yes");
+    intent.getExtras().putString("Answer", currentQuestion.answer);
+    startActivity(intent);
+                }
+            });
+    Button buttonNo = (Button) findViewById(R.id.buttonNo);
+    buttonNo.setOnClickListener(new Button.OnClickListener()
+    {
+    public void onClick(View v)
+        {
+    Log.d("BrainTest", "buttonNo click");
+    Intent result=new Intent(getApplicationContext(), Result.class);
+    startActivity(result);
         }
+    });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

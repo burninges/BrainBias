@@ -20,6 +20,14 @@
             android:name=".BrainTest"
             android:label="@string/title_activity_brain_test" >
         </activity>
+        <activity
+            android:name=".PositiveResult"
+            android:label="@string/title_activity_positive_result" >
+        </activity>
+        <activity
+            android:name=".Result"
+            android:label="@string/title_activity_result" >
+        </activity>
     </application>
 
 </manifest>

@@ -5,32 +5,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
-import com.example.samona.brainbias.questions.Question;
 
 
-public class BrainBias extends ActionBarActivity {
-    public static final Question[] QUESTIONS = new Question[] {new Question("Like coding?", "Yes")};
+public class Result extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_brain_bias);
-    }
+        setContentView(R.layout.activity_result);
 
-    public void buttonOnClick(View v) {
-        // Do something when the button is clicked
-        Button button=(Button) v;
-        startActivity(new Intent(getApplicationContext(), BrainTest.class));
+        Intent intent = getIntent();
+        intent.getExtras().get("Answer");
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_brain_bias, menu);
+        getMenuInflater().inflate(R.menu.menu_result, menu);
         return true;
     }
 
@@ -49,5 +42,3 @@ public class BrainBias extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-
-
