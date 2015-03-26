@@ -16,10 +16,6 @@ public class QuestionsBuilder {
             , "No"));
         questions.add(new Question("Neglecting Probability Fallacy: Luke was feeling confident. He hadn’t won the coin toss for the football kick-off for three games now. He was certain he would win this time."
             , "No"));
-        questions.add(new Question(
-
-
-        questions.add(new Question(
 
 
 

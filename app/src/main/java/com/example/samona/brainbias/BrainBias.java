@@ -12,7 +12,8 @@ import com.example.samona.brainbias.questions.Question;
 
 
 public class BrainBias extends ActionBarActivity {
-    public static final Question[] QUESTIONS = new Question[] {new Question("Like coding?", "Yes")};
+    //public static final Question[] QUESTIONS = new Question[] {new Question("Like coding?", "Yes")};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

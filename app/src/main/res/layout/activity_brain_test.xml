@@ -9,18 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exospherians were eating lunch. At a nearby table there was a man gesticulating and waving his arms as he spoke. Antonio stated, &apos;That man is Italian.&apos;"
-        android:id="@+id/textView"
+        android:id="@+id/question"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Is that confirmation bias?"
-        android:id="@+id/textView2"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="20sp" />
 

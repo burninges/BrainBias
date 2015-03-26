@@ -8,20 +8,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.samona.brainbias.questions.Question;
+import com.example.samona.brainbias.questions.QuestionsBuilder;
 
 
 public class BrainTest extends ActionBarActivity
     {
+
+    public QuestionsBuilder getQuestions  = new QuestionsBuilder(); {
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
-        {
+    {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_brain_test);
-    final Question currentQuestion = BrainBias.QUESTIONS[0];
-            // add public ...
+
+    TextView questionView = (TextView) findViewById(R.id.question);
+    final Question question = getQuestions.getRandomQuestion();
+    questionView.setText(question.question);
+
+
+    //final Question currentQuestion = BrainBias.QUESTIONS[0];
+  
     Button buttonYes = (Button) findViewById(R.id.buttonYes);
     buttonYes.setOnClickListener(new Button.OnClickListener()
             {
@@ -31,7 +45,7 @@ public class BrainTest extends ActionBarActivity
 
     Intent intent = new Intent(getApplicationContext(), Result.class);
     intent.getExtras().putString("Guess", "Yes");
-    intent.getExtras().putString("Answer", currentQuestion.answer);
+    intent.getExtras().putString("Answer", question.answer);
     startActivity(intent);
                 }
             });
