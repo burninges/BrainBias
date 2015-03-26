@@ -21,12 +21,14 @@ public class BrainTest extends ActionBarActivity
 
     setContentView(R.layout.activity_brain_test);
     final Question currentQuestion = BrainBias.QUESTIONS[0];
+            // add public ...
     Button buttonYes = (Button) findViewById(R.id.buttonYes);
     buttonYes.setOnClickListener(new Button.OnClickListener()
             {
     public void onClick(View v)
                 {
     Log.d("BrainTest", "buttonYes click");
+
     Intent intent = new Intent(getApplicationContext(), Result.class);
     intent.getExtras().putString("Guess", "Yes");
     intent.getExtras().putString("Answer", currentQuestion.answer);
