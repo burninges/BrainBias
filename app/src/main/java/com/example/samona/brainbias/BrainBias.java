@@ -1,12 +1,14 @@
 package com.example.samona.brainbias;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.samona.brainbias.questions.Question;
 
@@ -19,6 +21,9 @@ public class BrainBias extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brain_bias);
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "fonts/Externalfont.ttf");
+        TextView myTextview = (TextView)findViewById(R.id.textview1);
+        myTextview.setTypeface(myTypeface);
     }
 
     public void buttonOnClick(View v) {

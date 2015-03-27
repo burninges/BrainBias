@@ -44,8 +44,9 @@ public class BrainTest extends ActionBarActivity
     Log.d("BrainTest", "buttonYes click");
 
     Intent intent = new Intent(getApplicationContext(), Result.class);
-    intent.getExtras().putString("Guess", "Yes");
-    intent.getExtras().putString("Answer", question.answer);
+    intent.putExtra("Guess", "Yes");
+    intent.putExtra("Answer", question.answer);
+    intent.putExtra("Definition", question.definition);
     startActivity(intent);
                 }
             });
@@ -55,8 +56,10 @@ public class BrainTest extends ActionBarActivity
     public void onClick(View v)
         {
     Log.d("BrainTest", "buttonNo click");
-    Intent result=new Intent(getApplicationContext(), Result.class);
-    startActivity(result);
+    Intent intent=new Intent(getApplicationContext(), Result.class);
+    intent.putExtra("Guess", "No");
+    intent.putExtra("Answer", question.answer);
+    startActivity(intent);
         }
     });
     }
