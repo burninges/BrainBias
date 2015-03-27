@@ -59,6 +59,7 @@ public class BrainTest extends ActionBarActivity
     Intent intent=new Intent(getApplicationContext(), Result.class);
     intent.putExtra("Guess", "No");
     intent.putExtra("Answer", question.answer);
+    intent.putExtra("Definition", question.definition);
     startActivity(intent);
         }
     });

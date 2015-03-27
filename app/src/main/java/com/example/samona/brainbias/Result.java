@@ -19,28 +19,17 @@ public class Result extends ActionBarActivity {
         Intent intent = getIntent();
         String choice = intent.getExtras().getString("Guess");
         String answer = intent.getExtras().getString("Answer");
+        String definition = intent.getExtras().getString("Definition");
+        TextView definitionText = (TextView) findViewById(R.id.definition);
+        definitionText.setText(definition);
         TextView resultText = (TextView) findViewById(R.id.result);
         if (choice.equals(answer)) {
             resultText.setText("Awesome!");
-
-            TextView definitionText;
-            definitionText.setText(getDefinition);
 
 
         } else {
             resultText.setText("WRONG!");
         }
-        /*"Confirmation bias is only referencing and validating things that support one’s perspective and ignoring things that don’t.",
-                "The scenario describes the “Ingroup Bias” where often groups tend to overestimate  the skills and abilities of its members at the expense of the unknown others.",
-                "The phenomena described is the “Gambler’s Fallacy”. It is when people think there odds change based on previous events. E.G. A coin toss is always 50/50.",
-                "Definition 4",
-                "Definition 5",
-                "Definition 6",
-                "Definition 7",
-                "Definition 8",
-                "Definition 9",
-                "Definition 10",*/
-
 
     }
 
