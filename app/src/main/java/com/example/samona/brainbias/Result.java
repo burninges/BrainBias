@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -30,7 +31,12 @@ public class Result extends ActionBarActivity {
         } else {
             resultText.setText("WRONG!");
         }
+        }
 
+    public void buttonOnClick(View v) {
+        // Do something when the button is clicked
+        Button button2=(Button) v;
+        startActivity(new Intent(getApplicationContext(), BrainTest.class));
     }
 
 
