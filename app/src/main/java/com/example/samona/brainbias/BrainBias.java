@@ -1,5 +1,6 @@
 package com.example.samona.brainbias;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 import com.example.samona.brainbias.questions.Question;
 
 
-public class BrainBias extends ActionBarActivity {
+public class BrainBias extends Activity {
     //public static final Question[] QUESTIONS = new Question[] {new Question("Like coding?", "Yes")};
 
 

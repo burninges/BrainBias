@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">Brain Bias</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_brain_test">Answer the question</string>
     <string name="Example">Exospherians were eating lunch. At a nearby table there was a man gesticulating and waving his arms as he spoke. Antonio noted that the man was Italian.</string>
-    <string name="title_activity_positive_result">Positive Result</string>
     <string name="title_activity_result">Result</string>
+    <string name="title_activity_definition">Definition</string>
 </resources>

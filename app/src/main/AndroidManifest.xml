@@ -21,8 +21,8 @@
             android:label="@string/title_activity_brain_test" >
         </activity>
         <activity
-            android:name=".PositiveResult"
-            android:label="@string/title_activity_positive_result" >
+            android:name=".DefinitionActivity"
+            android:label="@string/title_activity_definition" >
         </activity>
         <activity
             android:name=".Result"

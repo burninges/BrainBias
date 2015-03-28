@@ -1,16 +1,26 @@
 package com.example.samona.brainbias;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class Result extends ActionBarActivity {
+
+    private Runnable definitionRunnable = new Runnable() {
+        @Override
+        public void run() {
+            Intent intent = new Intent(getApplicationContext(), DefinitionActivity.class);
+            intent.putExtra("Definition", (String) getIntent().getExtras().get("Definition"));
+            startActivity(intent);
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,25 +30,28 @@ public class Result extends ActionBarActivity {
         Intent intent = getIntent();
         String choice = intent.getExtras().getString("Guess");
         String answer = intent.getExtras().getString("Answer");
-        String definition = intent.getExtras().getString("Definition");
-        TextView definitionText = (TextView) findViewById(R.id.definition);
-        definitionText.setText(definition);
-        TextView resultText = (TextView) findViewById(R.id.result);
+        RelativeLayout resultLayout = (RelativeLayout) findViewById(R.id.resultLayout);
+
         if (choice.equals(answer)) {
-            resultText.setText("Awesome!");
-
-
+            resultLayout.setBackgroundResource(R.drawable.awesome);
         } else {
-            resultText.setText("WRONG!");
+            resultLayout.setBackgroundResource(R.drawable.loser);
         }
-        }
+        delayStartDefinitionActivity();
+    }
 
-    public void buttonOnClick(View v) {
+    private void delayStartDefinitionActivity() {
+        Handler handler = new Handler();
+        handler.postDelayed(definitionRunnable, 2000);
+    }
+
+
+    /*public void buttonOnClick(View v) {
         // Do something when the button is clicked
         Button button2=(Button) v;
         startActivity(new Intent(getApplicationContext(), BrainTest.class));
     }
-
+    */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

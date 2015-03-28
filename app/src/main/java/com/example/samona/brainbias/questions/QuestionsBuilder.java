@@ -21,7 +21,7 @@ public class QuestionsBuilder {
         questions.add(new Question("Upon returning to Canada, Mona recalled many details about failing to create a working android ap. Yet she couldn’t remember where the best pisco sours were or, who attended Lais & Brigita’s party.\nIs this a case of too many pisco sours bias?"
             , "No", "This is an example of the negativity bias – where people tend to recall details of nasty events over more pleasant ones."));
         questions.add(new Question("Letícia, Humberto and Márcio seem quiet and introverted therefore they can’t be Brazilian.\nIs this stereotyping?"
-            , "Yes", "Stereotyping is expecting people to have specific characteristics based on their membership to a group"));
+            , "Yes", "Stereotyping is expecting people to have specific characteristics based on their membership to a group."));
 
         return questions;
     }
